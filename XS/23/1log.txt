@@ -1,0 +1,73 @@
+23goc.
+lich 23.25
+mailrep 23
+note2
+nt2
+
+usleep\(\s*(\d+(?:\.\d+)?)\s*\); ( tìm tất cả usleep
+
+
+usleep\(\s*(\d{1,5})\.\d*\s*\) tìm dưới 100k 
+usleep(Math.random() * (100000 - 70000) + 70000)
+
+usleep\(\s*((?:[5-9]\d{5}|[1-9]\d{6}|[12]0{6}))\.\d*\s*\) 
+
+Trong mẫu này, [5-9]\d{5} đại diện cho các số có 6 chữ số bắt đầu từ 5 đến 9 (từ 500000 đến 999999), [1-9]\d{6} đại diện cho các số có 7 chữ số bắt đầu từ 1 đến 9 (từ 1000000 đến 9999999), và [12]0{6} đại diện cho số 2000000.
+usleep\(\s*((?:[5-9]\d{5}|[1][0-9]{6}|2000000))\.\d*\s*\)
+đúng nhất tư
+usleep(Math.random() * (1300000 - 800000) + 800000)
+
+
+function handleUsleep(time) {
+  if (time >= 500000 && time <= 1000000) {
+    return Math.random() * (1300000 - 700000) + 700000;
+  } else if (time < 100000) {
+    return Math.random() * (1300000 - 800000) + 800000;
+  } else {
+    return time;
+  }
+}
+
+// Sử dụng hàm handleUsleep trong đoạn mã của bạn
+usleep(handleUsleep(1056341));
+// ...
+usleep(handleUsleep(125084.21));
+// ...
+usleep(handleUsleep(1417690.17));
+// ...
+usleep(handleUsleep(116780.04));
+// ...
+// Vào trong hàm runRandom()
+usleep(handleUsleep(91330.83));
+// ...
+usleep(handleUsleep(83032.96));
+// ...
+usleep(handleUsleep(74969.71));
+// ...
+// Trong hàm np()
+usleep(handleUsleep(852904));
+// ...
+usleep(handleUsleep(2452904));
+// ...
+
+=====Chuẩn 
+function rd(time) {
+  if (time >= 50000 && time <= 100000) {
+    return Math.random() * (100000 - 50000) + 50000;
+  } else if (time >= 7800 && time <= 8700) { //move
+    return Math.random() * (8700 - 7800) + 7800;
+  } else if (time >= 500000 && time <= 1000000) {
+    return Math.random() * (1000000 - 500000) + 500000;
+  } else if (time >= 1000000 && time <= 2000000) {
+    return Math.random() * (2000000 - 1000000) + 1000000;
+  } else if (time >= 2000000 && time <= 3000000) {
+    return Math.random() * (3000000 - 2000000) + 2000000;
+   } else {
+    return time;
+  }  
+}
+
+usleep\((\d+\.\d+)\) số thập phân
+usleep\((\d+)\)số nguyên 
+ rồi thay thế
+usleep(rd($1))
