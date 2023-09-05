@@ -1,0 +1,168 @@
+const { findImage,appState,stop,getColor,appActivate, touchDown, touchUp, usleep, toast,keyDown,touchMove, keyUp,appKill,screenshot } = at;
+const { 
+    check,us,tap,rd,
+
+    typeZ,typeX,typeC,typeV,typeB,typeN,typeM,
+    typeA,typeS,typeD,typeF,typeG,typeH,typeJ,typeK,typeL,
+    typeQ,typeW,typeE,typeR,typeT,typeY,typeU,typeI,typeO,typeP,
+
+    so0,so1,so2,so3,so4,so5,so6,so7,so8,so9,
+    gotu,typeWord,
+    names,
+    getRandomName,
+    //
+ typeCham,typePhay,typeChamhoi,typeChamthang,typeTru,typeXet,typeHaicham,typeChamphay,typeNgocmo,typeNgoacdong,typeTien,typeVa,typeAcong,typeKepdoi,typeKepdon,
+ type1,type2,type3,type4,type5,
+ type6,type7,type8,type9,type0,
+ //   typing,
+    getRandomso,
+    sos,
+    ///
+    motchu,getrandommotchu,typingmotchu,
+    //
+    vietRandom,vietnhantin,
+    //
+    vuotphaisangtrai,vuot,
+     } 
+= require("./znuoi");
+const bundleID = "com.apple.mobilemail"; // nhớ cái này
+//appActivate(bundleID); // nhớ cái này
+//////////////
+appActivate("com.apple.MobileSMS");
+function check1() {
+const result = appState("com.apple.MobileSMS");
+if (result !== "ACTIVATED") {
+stop();
+}
+}
+
+///
+
+//pp
+function pp() {
+    check1();
+touchDown(3, 375,90);
+usleep(rd(66079.54));
+touchUp(3, 375,90);
+usleep(rd(1720576.67));
+check1();
+return true;
+}
+
+//mail
+function clicktomail() {
+    check1();
+//touchDown(2, 572.73, 642.88);// gửi mail nhóm
+//usleep(rd(99450.83));// gửi mail nhóm
+//touchUp(2, 572.73, 642.88);// gửi mail nhóm
+//usleep(rd(2359505.58));// gửi mail nhóm
+
+
+
+touchDown(6, 461.87, 569.58);// gửi mail 1 người
+usleep(rd(66745.38));// gửi mail 1 người
+touchUp(6, 461.87, 569.58);// gửi mail 1 người
+usleep(rd(2359505.58));// gửi mail 1 người
+
+return true ;
+}
+//type
+
+
+
+//from my iphone
+function from_my_ip() {
+    check();
+touchDown(1, 426.98, 659.18);
+usleep(rd(116675.71));
+touchUp(1, 426.98, 659.18);
+usleep(rd(2951549.46));
+check();
+return true;
+}
+//type123
+
+
+//send
+function send_back() {
+    check();
+touchDown(5, 661.00, 220.37);
+usleep(rd(116396.54));
+touchUp(5, 661.00, 220.37);
+usleep(rd(88362.58));
+check();
+//backmess
+check();
+touchDown(1, 60.55, 37.09);
+usleep(rd(82825.71));
+touchUp(1, 60.55, 37.09);
+usleep(rd(88362.58));
+return true;
+}
+
+function info() {
+  const targetImagePath = '/var/mobile/Library/AutoTouch/Scripts/Examples/images/info.png';
+  const [result] = findImage({
+    targetImagePath,
+count: 1,
+threshold: 0.99,
+region: [452,159,142,137],
+debug: false,
+method: 1,
+  });
+  if (result.length > 0) {
+    const { x, y } = result[0];
+    us(1);
+    check1();
+    tap(x, y);
+
+    usleep(Math.random() * (2000000 - 1500000) + 1500000);
+
+    return true;
+     } else {
+     pp();
+    const [retryResult] = findImage({
+      targetImagePath,
+      count: 1,
+      threshold: 0.99,
+      region: [452,159,142,137],
+      debug: false,
+      method: 1,
+    });
+
+    if (retryResult.length > 0) {
+      const { x, y } = retryResult[0];
+      us(1);
+      check1();
+      tap(x, y);
+      check1();
+      us(1);
+
+      return true;
+    } else {
+      return false;
+     
+  }  
+}
+}
+
+function np(){
+    usleep(rd(2725354));
+for (let i = 0; i < 50; i++) { //NPNPNPNP
+console.log(`MAIL lặp lại ${i + 1} lần`);
+    usleep(rd(823240));
+    info();
+    clicktomail();
+vietnhantin();
+from_my_ip();
+
+vietnhantin();
+send_back();
+
+    usleep(rd(852904));
+  }
+  
+}
+np();
+//img/info
+//mail se 36

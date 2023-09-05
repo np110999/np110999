@@ -1,0 +1,372 @@
+const { findImage,appState,stop,getColor,appActivate, touchDown, touchUp, usleep, toast,keyDown,touchMove, keyUp,appKill,screenshot } = at;
+
+
+
+function check() {
+    result = appState(bundleID);
+    if (result !== "ACTIVATED") {
+        stop();
+    }
+}
+
+////
+function us(x) {
+    for (let i = 1; i <= x; i++) {
+        usleep(rd(1000000));
+    }
+}
+//////
+function tap(x, y) {
+    touchDown(0, x, y);
+    usleep(Math.random() * (80000 - 55000) + 55000);
+    touchUp(0, x, y);
+    usleep(Math.random() * (40000 - 30000) + 30000);
+}
+
+function rd(time) {
+  if (time >= 50000 && time <= 100000) {
+    return Math.random() * (100000 - 50000) + 50000;
+  } else if (time >= 500000 && time <= 1000000) {
+    return Math.random() * (1000000 - 500000) + 500000;
+  } else if (time >= 1000000 && time <= 1500000) {
+    return Math.random() * (1500000 - 1000000) + 1000000;
+  } else if (time >= 1500000 && time <= 2000000) {
+    return Math.random() * (1500000 - 1000000) + 1000000;
+  } else if (time >= 2000000 && time <= 3000000) {
+    return Math.random() * (3000000 - 2000000) + 2000000;
+  } else {
+    return time;
+  }  
+}
+
+function vuotphaisangtrai() {
+    for (let x = 580; x >= 160; x -= 30) {
+        usleep(rd(10000));
+        touchMove(1, x, 200);
+        // checkdis();
+    }
+}
+
+function vuot() {
+    usleep(rd(300000));
+    while (true) {
+         check();
+        touchDown(1, 580, 200);
+         check();
+        vuotphaisangtrai();
+        usleep(rd(500000));
+        touchUp(1, 160, 200);
+         check();
+      //  usleep(rd(8000));
+      //  touchDown(1, 400, 800);
+      ////  check();
+      //  usleep(rd(8000));
+      //  touchUp(1, 400, 800);
+      // // check();
+      //  usleep(rd(2000000));
+      // // check();
+
+        return true;
+    }
+}
+//vuot();
+
+function rd(time) {
+  if (time >= 50000 && time <= 100000) {
+    return Math.random() * (100000 - 50000) + 50000;
+  } else if (time >= 500000 && time <= 1000000) {
+    return Math.random() * (1000000 - 500000) + 500000;
+  } else if (time >= 1000000 && time <= 2000000) {
+    return Math.random() * (2000000 - 1000000) + 1000000;
+  } else if (time >= 2000000 && time <= 3000000) {
+    return Math.random() * (3000000 - 2000000) + 2000000;
+   } else {
+    return time;
+  }  
+}
+
+
+
+ function typeZ() { tap(157.04, 1165.19);} function typeX() { tap(231.96, 1169.27);} function typeC() { tap(305.87, 1174.35);} function typeV() { tap(372.57, 1172.32);} 
+ function typeB() { tap(456.75, 1173.34);} function typeN() { tap(524.48, 1169.27);} function typeM() { tap(606.59, 1165.19);} function typeA() { tap( 81.08, 1070.50);} 
+ function typeS() { tap(164.22, 1064.40);} function typeD() { tap(234.01, 1060.32);} function typeF() { tap(299.70, 1056.25);} function typeG() { tap(382.84, 1062.36);} 
+ function typeH() { tap(441.34, 1060.32);} function typeJ() { tap(538.86, 1063.38);} function typeK() { tap(616.86, 1067.45);} function typeL() { tap(694.86, 1066.43);} 
+ function typeQ() { tap(  36.94, 953.42);} function typeW() { tap( 121.11, 955.45);} function typeE() { tap( 205.27, 961.56);} function typeR() { tap( 270.96, 960.54);} 
+ function typeT() { tap( 349.99, 966.65);} function typeY() { tap( 430.06, 957.49);} function typeU() { tap( 493.70, 968.68);} function typeI() { tap( 571.70, 958.51);} 
+ function typeO() { tap( 651.76, 967.67);} function typeP() { tap( 734.89, 951.38);}
+////////
+ function space() { tap(488.56, 1280.24); }
+///////
+function so1() { tap( 133.43, 948.33);} function so2() { tap( 364.37, 944.26);}
+function so3() { tap( 608.65, 938.15);} function so4() { tap(147.80, 1058.29);}
+function so5() { tap(384.90, 1052.18);} function so6() { tap(613.78, 1040.99);}
+function so7() { tap(141.63, 1165.19);} function so8() { tap(377.71, 1163.16);}
+function so9() { tap(627.12, 1163.16);} function so0() { tap(392.07, 1274.14);}
+////
+function typeABC() { tap(44.13, 1274.14);}
+function typeCham() {typeABC(); tap(166.27, 1155.02);typeABC();}
+function typePhay() {typeABC(); tap(283.28, 1158.07);typeABC();}
+function typeChamhoi() {typeABC(); tap(392.07, 1150.95);typeABC();}
+function typeChamthang() {typeABC(); tap(486.51, 1160.11);typeABC();}
+function typeKepdon() {typeABC(); tap(585.04, 1149.93);}
+function typeTru() {typeABC(); tap(27.71, 1058.29);typeABC();}
+function typeXet() {typeABC(); tap(128.30, 1057.27);typeABC();}
+function typeHaicham() {typeABC(); tap(200.15, 1064.40);typeABC();}
+function typeChamphay() {typeABC(); tap(274.04, 1066.43);typeABC();}
+function typeNgocmo() {typeABC(); tap(353.07, 1072.54);typeABC();}
+function typeNgoacdong() { typeABC();tap(421.84, 1057.27);typeABC();}
+function typeTien() {typeABC(); tap(501.90, 1069.48);typeABC();}
+function typeVa() { typeABC();tap(571.70, 1057.27);typeABC();}
+function typeAcong() {typeABC(); tap(639.44, 1068.47);typeABC();}
+function typeKepdoi() { typeABC();tap(729.77, 1062.36);typeABC();}
+function type1() {typeABC(); tap(41.05, 962.58);typeABC();}
+function type2() {typeABC(); tap(119.05, 954.44);typeABC();}
+function type3() {typeABC(); tap(193.99, 951.38);typeABC();}
+function type4() {typeABC(); tap(266.85, 945.28);typeABC();}
+function type5() {typeABC(); tap(347.95, 957.49);typeABC();}
+function type6() {typeABC(); tap(422.87, 953.42);typeABC();}
+function type7() {typeABC(); tap(502.93, 959.52);typeABC();}
+function type8() {typeABC(); tap(562.47, 959.52);typeABC();}
+function type9() {typeABC(); tap(638.42, 954.44);typeABC();}
+function type0() {typeABC(); tap( 730.80, 952.40);typeABC();}
+////
+const gotu = {
+    'z': typeZ,'x': typeX,'c': typeC,'v': typeV,'b': typeB,'n': typeN,
+    'm': typeM,'a': typeA,'s': typeS,'d': typeD,'f': typeF,'g': typeG,
+    'h': typeH,'j': typeJ,'k': typeK,'l': typeL,'q': typeQ,'w': typeW,
+    'e': typeE,'r': typeR,'t': typeT,'y': typeY,'u': typeU,'i': typeI,
+    'o': typeO,'p': typeP,
+    //
+    ' ': space,
+
+    // ...
+    'n1': so1,'n2': so2,'n3': so3,'n4': so4,'n5': so5,
+    'n6': so6,'n7': so7,'n8': so8,'n9': so9,'n0': so0, 
+    //...
+ '.':  typeCham,
+ ',':  typePhay,
+ '?':  typeChamhoi,
+ '!':  typeChamthang,
+ '-':  typeTru,
+ '/':  typeXet,
+ ':':  typeHaicham,
+ ';':  typeChamphay,
+ '(':  typeNgocmo,
+ ')':  typeNgoacdong,
+ '$':  typeTien,
+ '&':  typeVa,
+ '@':  typeAcong,
+ '"':  typeKepdoi,
+ '1':  type1,'2':  type2,'3':  type3,'4':  type4,'5':  type5,
+ '6':  type6,'7':  type7,'8':  type8,'9':  type9,'0':  type0,
+};
+
+function typeWord(word) {
+    for (const char of word) {
+        const typeFunction = gotu[char.toLowerCase()];
+        if (typeFunction) {
+            typeFunction();
+        }
+    }
+}
+const goso = {
+   '1': so1,'2': so2,'3': so3,'4': so4,'5': so5,
+   '6': so6,'7': so7,'8': so8,'9': so9,'0': so0, 
+}
+function typeWord2(word) {
+    for (const char of word) {
+        const typeFunction = goso[char.toLowerCase()];
+        if (typeFunction) {
+            typeFunction();
+        }
+    }
+}
+//typeWord('qwertyuiopasdfghjklzxcvbnm');
+///typeWord('9876543210')
+const names = [
+    // Danh sách tên
+    // ...
+    'James', 'Robert', 'John', 'Michael', 'David', 'William', 'Richard', 'Joseph', 'Thomas', 'Christopher',
+    'Charles', 'Daniel', 'Matthew', 'Anthony', 'Mark', 'Donald', 'Steven', 'Andrew', 'Paul', 'Joshua',
+    'Kenneth', 'Kevin', 'Brian', 'George', 'Timothy', 'Ronald', 'Jason', 'Edward', 'Jeffrey', 'Ryan',
+    'Jacob', 'Gary', 'Nicholas', 'Eric', 'Jonathan', 'Stephen', 'Larry', 'Justin', 'Scott', 'Brandon',
+    'Daniel','Jack','Michael','Alexander','Owen','Asher','Samuel','Ethan','Leo','Jackson','Mason','Ezra','John',
+'Hudson','Luca','Aiden','Joseph','David','Jacob','Logan','Luke','Julian','Gabriel','Grayson','Wyatt','Matthew',
+'Maverick','Dylan','Isaac','Elias','Anthony','Thomas','Jayden','Carter','Santiago','Ezekiel','Charles','Josiah',
+'Caleb','Cooper','Lincoln','Miles','Christopher','Nathan','Isaiah','Kai','Joshua','Andrew','Angel','Adrian',
+'Cameron','Nolan','Waylon','Jaxon','Roman','Eli','Wesley','Aaron','Ian','Christian','Ryan','Leonardo','Brooks',
+'Axel','Walker','Jonathan','Easton','Everett','Weston','Bennett','Robert','Jameson','Landon','Silas','Jose',
+'Beau','Micah','Colton','Jordan','Jeremiah','Parker','Greyson','Rowan','Adam','Nicholas','Theo','Xavier',
+'Hunter','Dominic','Jace','Gael','River','Thiago','Kayden','Damian','August','Carson','Austin','Myles','Amir',
+'Declan','Emmett','Ryder','Luka','Connor','Jaxson','Milo','Enzo','Giovanni','Vincent','Diego','Luis','Archer',
+'Harrison','Kingston','Atlas','Jasper','Sawyer','Legend','Lorenzo','Evan','Jonah','Chase','Bryson','Adriel',
+'Nathaniel','Arthur','Juan','George','Cole','Zion','Jason','Ashton','Carlos','Calvin','Brayden','Elliot','Rhett',
+'Emiliano','Ace','Jayce','Graham','Max','Braxton','Leon','Ivan','Hayden','Jude','Malachi','Dean','Tyler','Jesus',
+'Zachary','Kaiden','Elliott','Arlo','Emmanuel','Ayden','Bentley','Maxwell','Amari','Ryker','Finn','Antonio',
+'Charlie','Maddox','Justin','Judah','Kevin','Dawson','Matteo','Miguel','Zayden','Camden','Messiah','Alan','Alex',
+'Nicolas','Felix','Alejandro','Jesse','Beckett','Matias','Tucker','Emilio','Xander','Knox','Oscar','Beckham',
+'Timothy','Abraham','Andres','Gavin','Brody','Barrett','Hayes','Jett','Brandon','Joel','Victor','Peter','Abel',
+'Edward','Karter','Patrick','Richard','Grant','Avery','King','Caden','Adonis','Riley','Tristan','Kyrie','Blake',
+'Eric','Griffin','Malakai','Rafael','Israel','Tate','Lukas','Nico','Marcus','Stetson','Javier','Colt','Omar',
+'Simon','Kash','Remington','Jeremy','Louis','Mark','Lennox','Callum','Kairo','Nash','Kyler','Dallas','Crew',
+'Preston','Paxton','Steven','Zane','Kaleb','Lane','Phoenix','Paul','Cash','Kenneth','Bryce','Ronan','Kaden',
+'Maximiliano','Walter','Maximus','Emerson','Hendrix','Jax','Atticus','Zayn','Tobias','Cohen','Aziel','Kayson',
+'Rory','Brady','Finley','Holden','Jorge','Malcolm','Clayton','Niko','Francisco','Josue','Brian','Bryan','Cade',
+'Colin','Andre','Cayden','Aidan','Muhammad','Derek','Ali','Elian','Bodhi','Cody','Jensen','Damien','Martin',
+'Cairo','Ellis','Khalil','Otto','Zander','Dante','Ismael','Angelo','Brantley','Manuel','Colson','Cruz','Tatum',
+'Jaylen','Jaden','Erick','Cristian','Romeo','Milan','Reid','Cyrus','Leonel','Joaquin','Ari','Odin','Orion',
+'Ezequiel','Gideon','Daxton','Warren','Casey','Anderson','Spencer','Karson','Eduardo','Chance','Fernando',
+'Raymond','Bradley','Cesar','Wade','Prince','Julius','Dakota','Kade','Koa','Raiden','Callan','Hector','Onyx',
+'Remy','Ricardo','Edwin','Stephen','Kane','Saint','Titus','Desmond','Killian','Sullivan','Mario','Jay',
+'Kamari','Luciano','Royal','Zyaire','Marco','Wilder','Russell','Nasir','Rylan','Archie','Jared','Gianni',
+'Kashton','Kobe','Sergio','Travis','Marshall','Iker','Briggs','Gunner','Apollo','Bowen','Baylor','Sage',
+'Tyson','Kyle','Oakley','Malik','Mathias','Sean','Armani','Hugo','Johnny','Sterling','Forrest','Harvey',
+'Banks','Grady','Kameron','Jake','Franklin','Lawson','Tanner','Eden','Jaziel','Pablo','Reed','Pedro','Zayne',
+'Royce','Edgar','Ibrahim','Winston','Ronin','Leonidas','Devin','Damon','Noel','Rhys','Clark','Corbin','Sonny',
+'Colter','Esteban','Erik','Baker','Adan','Dariel','Kylo','Tripp','Caiden','Frank','Solomon','Major','Memphis',
+'Quinn','Dax','Hank','Donovan','Finnegan','Nehemiah','Andy','Camilo','Asa','Jeffrey','Santino','Isaias','Jaiden',
+'Kian','Fabian','Callen','Ruben','Alexis','Emanuel','Francis','Garrett','Kendrick','Matthias','Wells','Augustus',
+'Jasiah','Alijah','Alonzo','Koda','Collin','Ford','Frederick','Jaxton','Kohen','Troy','Kason','Seth','Denver',
+'Kyson','Ares','Raphael','Bodie','Sylas','Uriel','Zaiden','Shiloh','Lewis','Kieran','Marcos','Bo','Shepherd',
+'Philip','Zaire','Gregory','Princeton','Roberto','Leland','Eithan','Moshe','Johnathan','Lucca','Kenzo','Mack',
+'Porter','Kolton','Kaison','Valentino','Saul','Shane','Jamari','Rocco','Kylan','Deacon','Dalton','Moses','Callahan',
+'Tadeo','Makai','Amiri','Rowen','Drew','Jalen','Kylian','Sutton','Dominick','Reece','Rodrigo','Soren','Kasen','Ridge',
+'Zachariah','Jamir','Peyton','Omari','Trevor','Morgan','Izaiah','Alessandro','Kaysen','Enrique','Marcelo','Sincere',
+'Lucian','Leandro','Armando','Braylen','Jayson','Julio','Lawrence','Cassius','Raul','Jase','Mohammad','Zain','Jayceon',
+'Jonas','Ronald','Ayaan','Rio','Allen','Bruce','Mohamed','Dorian','Maximilian','Keegan','Shawn','Yusuf','Pierce','Ariel',
+'Ander','Conor','Conrad','Phillip','Arjun','Roy','Moises','Arturo','Johan','Gerardo','Atreus','Nikolai','Braylon','Samson',
+'Hezekiah','Kayce','Scott','Gunnar','Jamison','Samir','Keanu','Ledger','Jaime','Finnley','Cannon','Colby','Nikolas',
+'Emmitt','Kamden','Miller','Boone','Hamza','Ocean','Mac','Anakin','Brixton','Roland','Huxley','Zeke','Danny','Marvin',
+'Otis','Albert','Clay','Emir','Boston','Bruno','Lionel','Ozzy','Taylor','Jamie','Augustine','Chaim','Krew','Rayan',
+'Alden','Bellamy','Amos','Drake','Davis','Dustin','Corey','Ahmad','Conner','Gustavo','Layton','Abram','Axton',
+'Chandler','Azariah','Reese','Benson','Tru','Case','Trey','Mauricio','Westin','Gage','Reign','Creed','Mylo',
+'Dennis','Quentin','Madden','Rome','Julien','Sam','Zaid','Marcel','Maximo','Layne','Ahmed','Kannon','Quincy',
+'Yosef','Aarav','Lennon','Ryland','Skyler','Chris','Eliam','Kareem','Kyree','Dario','Donald','Fletcher','Darius',
+'Duke','Rayden','Salem','Vicente','Vincenzo','Cayson',
+
+];
+function getRandomName() {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+}
+const sos = [
+    '1','2','3','4','5','6','7','8','9'
+];
+function getRandomso(){
+    const randomIndex = Math.floor(Math.random() * sos.length);
+    return sos[randomIndex];
+}
+
+// Định nghĩa hàm typing ở đây
+function typing() {
+    for (let i = 0; i < 10; i++) {
+        const randomName = getRandomName();
+        typeWord(randomName);
+        typeWord(' ');
+        
+        us(1); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+function typingso() {
+    for (let i = 0; i < 10; i++) {check();
+        const randomName = getRandomso();
+        typeWord2(randomName);check();
+        //typeWord(' ');
+        
+        usleep(rd(106054.08));check(); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+
+//////////
+const motchu = [
+    // ...
+    'z', 'x', 'c', 'v', 'b', 'n', 'm', 'a', 's', 'd',
+    'f', 'g', 'h', 'j', 'k', 'l', 'q', 'w', 'e', 'r',
+    't', 'y', 'u', 'i', 'o', 'p',
+];
+function getrandommotchu() {
+    const randomIndex = Math.floor(Math.random() * motchu.length);
+    return motchu[randomIndex];
+}
+
+
+// Định nghĩa hàm typing ở đây
+function typingmotchu() {
+    for (let i = 0; i < 1; i++) {
+        const randommotchu = getrandommotchu();
+        typeWord(randommotchu);
+        
+        us(1); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+///////
+function vietRandom() {
+  const randomNumber = Math.random();
+
+  if (randomNumber < 0.1) {
+      check();
+typingmotchu();
+    check();
+  } else if (randomNumber < 0.4) {
+      check();//BAM1
+touchDown(6, 136.51, 849.57);
+usleep(rd(116625.62));
+touchUp(6, 136.51, 849.57);
+usleep(rd(950179.29));
+    check();
+  } else if (randomNumber < 0.7) {
+      check();//BAM2
+touchDown(1, 381.82, 857.71);
+usleep(rd(150010.88));
+touchUp(1, 381.82, 857.71);
+usleep(rd(967055.12));
+    check();
+  } else {
+      check();//BAM3
+touchDown(4, 630.20, 851.60);
+usleep(rd(149788.67));
+touchUp(4, 630.20, 851.60);
+usleep(rd(950179.29));check();
+  }
+  return true;
+}
+
+
+function vietnhantin() {
+    const iterations = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+// random
+for (let i = 0; i < iterations; i++) {
+  vietRandom();
+}}
+//vietnhantin();
+//img/info
+
+
+
+module.exports = {
+    check,us,tap,rd,
+
+    typeZ,typeX,typeC,typeV,typeB,typeN,typeM,
+    typeA,typeS,typeD,typeF,typeG,typeH,typeJ,typeK,typeL,
+    typeQ,typeW,typeE,typeR,typeT,typeY,typeU,typeI,typeO,typeP,
+
+    so0,so1,so2,so3,so4,so5,so6,so7,so8,so9,
+    gotu,typeWord,
+    names,
+    getRandomName,
+ //   typing,
+    goso,typeWord2,
+    getRandomso,
+    sos,
+    ///
+    motchu,getrandommotchu,typingmotchu,
+    //
+    vietRandom,vietnhantin,
+    //
+    vuotphaisangtrai,vuot,
+//
+typeCham,typePhay,typeChamhoi,typeChamthang,typeTru,typeXet,typeHaicham,typeChamphay,typeNgocmo,typeNgoacdong,typeTien,typeVa,typeAcong,typeKepdoi,typeKepdon,
+ type1,type2,type3,type4,type5,
+ type6,type7,type8,type9,type0,
+    
+};

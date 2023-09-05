@@ -1,0 +1,187 @@
+const { findImage,appState,stop,getColor,appActivate, touchDown, touchUp, usleep, toast,keyDown,touchMove, keyUp,appKill,screenshot } = at;
+const { 
+    check,us,tap,rd,
+
+    typeZ,typeX,typeC,typeV,typeB,typeN,typeM,
+    typeA,typeS,typeD,typeF,typeG,typeH,typeJ,typeK,typeL,
+    typeQ,typeW,typeE,typeR,typeT,typeY,typeU,typeI,typeO,typeP,
+
+    so0,so1,so2,so3,so4,so5,so6,so7,so8,so9,
+    gotu,typeWord,
+    names,
+    getRandomName,
+    //
+ typeCham,typePhay,typeChamhoi,typeChamthang,typeTru,typeXet,typeHaicham,typeChamphay,typeNgocmo,typeNgoacdong,typeTien,typeVa,typeAcong,typeKepdoi,typeKepdon,
+ type1,type2,type3,type4,type5,
+ type6,type7,type8,type9,type0,
+ //   typing,
+    goso,typeWord2,
+    getRandomso,
+    sos,
+    ///
+    motchu,getrandommotchu,typingmotchu,
+    //
+    vietRandom,vietnhantin,
+    //
+    vuotphaisangtrai,vuot,
+     } 
+= require("./znuoi");
+const bundleID = "com.apple.mobilephone"; // nhớ cái này
+appActivate(bundleID); // nhớ cái này
+//////////////
+
+
+//contact
+function contacts(){
+touchDown(6, 468.03, 1253.76);check();
+usleep(rd(82387.83));check();
+touchUp(6, 468.03, 1253.76);check();
+usleep(rd(1050581.54));check();
+
+
+touchDown(6, 473.17, 1287.37);check();
+usleep(rd(99487.33));check();
+touchUp(6, 473.17, 1287.37);check();
+usleep(rd(1067311.58));check();
+}
+//cong
+function cong() {
+touchDown(5, 717.45, 63.57);check();
+usleep(rd(99528.29));check();
+touchUp(5, 717.45, 63.57);check();
+usleep(rd(1300339.71));check();
+}
+//vuot
+function vuott(){
+touchDown(2, 426.98, 835.32);
+usleep(rd(66306.79));
+touchMove(2, 424.92, 827.18);
+usleep(rd(16767.62));check();
+touchMove(2, 424.92, 819.03);
+usleep(rd(16824.17));
+touchMove(2, 424.92, 810.87);
+usleep(rd(16472.08));
+touchMove(2, 424.92, 801.71);
+usleep(rd(16397.71));
+touchMove(2, 424.92, 779.32);
+usleep(rd(16616.46));
+touchMove(2, 426.98, 773.21);
+usleep(rd(17340.67));
+touchMove(2, 426.98, 758.94);
+usleep(rd(16829.33));
+touchMove(2, 426.98, 742.66);
+usleep(rd(16710.92));check();
+touchMove(2, 426.98, 725.36);
+usleep(rd(16570.75));
+touchMove(2, 428.01, 713.15);
+usleep(rd(16148.92));
+touchMove(2, 432.11, 700.91);
+usleep(rd(17182.08));
+touchMove(2, 432.11, 688.70);
+usleep(rd(16598.54));
+touchMove(2, 433.14, 666.31);
+usleep(rd(16673.42));
+touchMove(2, 433.14, 648.99);check();
+usleep(rd(16649.54));
+touchMove(2, 434.17, 631.68);
+usleep(rd(16023.21));
+touchMove(2, 435.18, 614.38);
+usleep(rd(16796.04));
+touchMove(2, 436.21, 601.15);
+usleep(rd(17230.50));
+touchMove(2, 442.37, 587.90);
+usleep(rd(16297.38));
+touchMove(2, 442.37, 577.72);
+usleep(rd(16978.12));check();
+touchMove(2, 443.40, 570.60);
+usleep(rd(16435.54));
+touchMove(2, 446.48, 549.22);
+usleep(rd(16981.75));
+touchMove(2, 449.56, 535.97);
+usleep(rd(16617.88));
+touchMove(2, 452.64, 525.80);
+usleep(rd(16899.50));
+touchMove(2, 455.72, 512.56);
+usleep(rd(16353.21));
+touchMove(2, 458.79, 500.35);
+usleep(rd(16707.79));
+touchMove(2, 461.87, 486.10);
+usleep(rd(16895.00));
+touchMove(2, 464.95, 477.94);check();
+usleep(rd(16535.17));
+touchMove(2, 465.98, 473.87);
+usleep(rd(32783.21));
+touchMove(2, 467.01, 467.76);
+usleep(rd(50416.88));
+touchMove(2, 467.01, 466.75);
+usleep(rd(33185.88));
+touchMove(2, 467.01, 467.76);
+usleep(rd(16752.29));check();
+touchMove(2, 467.01, 471.83);
+usleep(rd(99837.88));
+touchMove(2, 468.03, 471.83);
+usleep(rd(66514.83));
+touchUp(2, 469.06, 474.89);
+usleep(rd(1200610.17));
+}
+//add
+function addphone() {
+touchDown(1, 377.71, 707.04);check();
+usleep(rd(66158.12));check();
+touchUp(1, 377.71, 707.04);check();
+usleep(rd(966158.12));check();
+}
+
+//done
+function donecontacts2() {
+touchDown(6, 683.58, 136.87);check();
+usleep(rd(66058.46));
+touchUp(6, 683.58, 136.87);check();
+usleep(rd(2900835.96));
+//cancel
+touchDown(4, 62.60, 66.62);
+usleep(rd(49433.67));check();
+touchMove(4, 63.63, 66.62);
+usleep(rd(16561.58));check();
+touchUp(4, 65.69, 70.69);check();
+usleep(rd(900835.96));
+}
+
+function typing() {
+    for (let i = 0; i < 1; i++) {check();
+        const randomName = getRandomName();
+        typeWord(randomName);check();
+        //typeWord(' ');
+        
+        usleep(rd(906054.08));check(); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+
+function typingso() {
+    for (let i = 0; i < 10; i++) {check();
+        const randomName = getRandomso();
+        typeWord2(randomName);check();
+        //typeWord(' ');
+        
+        usleep(rd(106054.08));check(); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+
+function np(){
+  usleep(rd(919154.71));
+   for (let i = 0; i < 10; i++) {
+     console.log(`addcontact lặp lại ${i + 1} lần`); // In ra số lần lặp
+     contacts();  check();
+     cong();check();
+     typing();check();
+     vuott();check();
+     usleep(rd(923040.3));check();
+     addphone();check();
+     typingso();check();
+     donecontacts2();check();
+
+   }
+   appKill(bundleID);
+   usleep(rd(919154.71));
+}
+np();

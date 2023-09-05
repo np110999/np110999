@@ -1,0 +1,62 @@
+    const { findImage,appState,stop,getColor,appActivate, touchDown, touchUp, usleep, toast,keyDown,touchMove, keyUp,appKill,screenshot } = at;
+const { 
+    check,us,tap,rd,
+
+    typeZ,typeX,typeC,typeV,typeB,typeN,typeM,
+    typeA,typeS,typeD,typeF,typeG,typeH,typeJ,typeK,typeL,
+    typeQ,typeW,typeE,typeR,typeT,typeY,typeU,typeI,typeO,typeP,
+
+    so0,so1,so2,so3,so4,so5,so6,so7,so8,so9,
+    gotu,typeWord,
+    names,
+    getRandomName,
+ //   typing,
+    getRandomso,
+    sos,
+    ///
+    motchu,getrandommotchu,typingmotchu,
+    //
+    vietRandom,vietnhantin,
+    //
+    vuotphaisangtrai,vuot,
+     } 
+= require("./znuoi");// nhớ cái này
+ // nhớ cái này
+ const bundleID = "com.apple.mobilenotes"; 
+    appActivate(bundleID);
+//////////////
+
+//add
+function add() {
+touchDown(4, 682.55, 1275.15);check();
+usleep(rd(116138.08));check();
+touchUp(4, 682.55, 1275.15);check();
+usleep(rd(950513.38));check();
+}
+//type
+
+//done
+function done() {
+touchDown(3, 703.08, 83.92);check();
+usleep(rd(82867.54));check();
+touchUp(3, 703.08, 83.92);check();
+usleep(rd(550513.38));check();
+}
+
+
+function np(){
+
+
+
+for (let i = 0; i < 10; i++) {
+  console.log(`note lặp lại ${i + 1} lần`); // In ra số lần lặp
+     usleep(rd(852904.23));check();
+    add();check();
+ vietnhantin();check();
+    done(); check();
+    usleep(rd(852904.23));check();
+  }
+  appKill(bundleID);
+}
+np();
+//note se

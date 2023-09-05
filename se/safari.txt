@@ -1,0 +1,104 @@
+const { findImage,appState,stop,getColor,appActivate, touchDown, touchUp, usleep, toast,keyDown,touchMove, keyUp,appKill,screenshot } = at;
+const { 
+    check,us,tap,rd,
+
+    typeZ,typeX,typeC,typeV,typeB,typeN,typeM,
+    typeA,typeS,typeD,typeF,typeG,typeH,typeJ,typeK,typeL,
+    typeQ,typeW,typeE,typeR,typeT,typeY,typeU,typeI,typeO,typeP,
+
+    so0,so1,so2,so3,so4,so5,so6,so7,so8,so9,
+    gotu,typeWord,
+    names,
+    getRandomName,
+    //
+ typeCham,typePhay,typeChamhoi,typeChamthang,typeTru,typeXet,typeHaicham,typeChamphay,typeNgocmo,typeNgoacdong,typeTien,typeVa,typeAcong,typeKepdoi,typeKepdon,
+ type1,type2,type3,type4,type5,
+ type6,type7,type8,type9,type0,
+ //   typing,
+    getRandomso,
+    sos,
+    ///
+    motchu,getrandommotchu,typingmotchu,
+    //
+    vietRandom,vietnhantin,
+    //
+    vuotphaisangtrai,vuot,
+     } 
+= require("./znuoi");
+const bundleID = "com.apple.mobilesafari"; // nhớ cái này
+appActivate(bundleID); // nhớ cái này
+//////////////
+//add
+function add() {
+touchDown(6, 684.61, 1287.37);
+usleep(rd(99651.75));
+touchUp(6, 684.61, 1287.37);
+usleep(rd(1733752.08));
+}
+//cong
+function cong() {
+touchDown(1, 355.13, 1280.24);
+usleep(rd(116253.12));
+touchUp(1, 355.13, 1280.24);
+usleep(rd(1867387.17));
+}
+//search
+function search() {
+touchDown(3, 213.49, 84.94);
+usleep(rd(82419.38));
+touchUp(3, 213.49, 84.94);
+usleep(rd(1900833.25));
+}
+//go
+function go() {
+touchDown(6, 686.66, 1283.30);
+usleep(rd(169109.08));
+touchUp(6, 686.66, 1283.30);
+usleep(rd(1967387.17));
+}
+const linkk = [
+    // Danh sách tên
+    // ...
+    'youtube.com', 'facebook.com', 'wikipedia.org', 'amazon.com', 'live.com', 'ebay.com', 'target.com', 'overstock.com', 'jomashop.com', 'macys.com',
+    'levi.com', 'lacoste.com', '1saleaday.com', 'sephora.com', 'disneystore.com', 'www.compusa.com', 'www.forever21.com', 'walgreens.com', 'usababy.com', 'shopping.com',
+    'fragancenet.com', 'www.costco.com', 'www.kmart.com', 'www.rayban.com', 'bestbuy.com',
+];
+function getRandomlink() {
+    const randomIndex = Math.floor(Math.random() * linkk.length);
+    return linkk[randomIndex];
+}
+
+// Định nghĩa hàm typing ở đây
+function typinglink() {
+    for (let i = 0; i < 1; i++) {
+        const randomLink = getRandomlink();
+        typeWord(randomLink);
+        //typeWord(' ');
+        
+        us(1); // Để tạo khoảng thời gian giữa các lần gõ tên
+    }
+}
+function np() {
+    usleep(rd(725354));
+    
+    
+    for (let i = 0; i < 4; i++) {
+        console.log(`safari lặp lại ${i + 1} lần`); // In ra số lần lặp
+        add();check();
+        cong();check();
+        search();check();
+       typinglink();check();
+       go();check();
+        usleep(rd(852904));check();
+    }
+    add();check();
+        cong();check();
+        search();check();
+    typeWord('icloud.com');check();
+       go();check();
+        usleep(rd(852904));check();
+    
+}
+
+np();
+//safari se
